@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "nodemon --exec \"mocha src/test/index.spec.js\""
+  },
+  "keywords": [],
+  "author": "Ian Gelfand",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2"
+  }
+}
