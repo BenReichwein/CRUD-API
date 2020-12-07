@@ -1,4 +1,4 @@
-# API [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IanGelfand/API/issues)
+# API - [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IanGelfand/API/issues) [![contributions welcome](https://img.shields.io/badge/version-0.0.1-lightblue.svg?style=flat)]
 
 Sample of how to use express with chai and mocha testing.
 
