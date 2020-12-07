@@ -12,22 +12,16 @@ Sample of how to use express with chai and mocha testing.
 ## Installation
 
 ```sh
-curl -LO http://git.io/Xy0Chg
-git add README.md
-git commit -m "Use README Boilerplate"
+git pull https://github.com/IanGelfand/API/issues/new
+cd API
+npm install
 ```
 
 ## Usage
 
-Replace the contents of `README.md` with your project's:
+- In one shell `npm run start`
+- In a second tab `npm run test`
 
-- Name
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-- Licence
 
 ## Support
 
