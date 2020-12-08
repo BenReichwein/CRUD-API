@@ -25,7 +25,7 @@ const data = (app, fs) => {
     };
 
     // READ
-    app.get('/img', cors(), (req, res) => {
+    app.get('/image', cors(), (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
@@ -34,11 +34,6 @@ const data = (app, fs) => {
             res.end()
         });
     });
-
-    // SEND IMAGE
-    // app.get('/img', (req, res) => {
-    //     res.sendFile('./src/data/absimgs/bicycle-crunches.jpg');
-    // });
 };
 
 module.exports = data;
