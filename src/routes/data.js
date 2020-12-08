@@ -1,3 +1,5 @@
+const cors = require('cors')
+
 const data = (app, fs) => {
     // variables
     const dataPath = 'src/data/data.json';
@@ -23,7 +25,7 @@ const data = (app, fs) => {
     };
 
     // READ
-    app.get('/abs', (req, res) => {
+    app.get('/img', cors(), (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
@@ -34,9 +36,9 @@ const data = (app, fs) => {
     });
 
     // SEND IMAGE
-    app.get('/img', (req, res) => {
-        res.sendFile('./src/data/absimgs/bicycle-crunches.jpg');
-    });
+    // app.get('/img', (req, res) => {
+    //     res.sendFile('./src/data/absimgs/bicycle-crunches.jpg');
+    // });
 };
 
 module.exports = data;
