@@ -35,7 +35,7 @@ const data = (app, fs) => {
 
     // SEND IMAGE
     app.get('/img', (req, res) => {
-        res.sendFile('/src/data/absimgs/bicycle-crunches.jpg');
+        res.sendFile('./src/data/absimgs/bicycle-crunches.jpg');
     });
 };
 
