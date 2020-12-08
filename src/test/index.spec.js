@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 const request = require('request')
-const server = 'http://localhost:3000'
+const server = 'http://localhost:3000' || process.env.PORT
 
 describe('Testing basic request and status codes', function () {
   describe('/', () => {

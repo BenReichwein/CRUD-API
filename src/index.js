@@ -1,22 +1,13 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
+const bodyParser = require('body-parser')
+const fs = require('fs')
+const PORT = 3000 || process.env.PORT
 
-app.get('/', (req, res, next) => {
-    try {
-        res.send('<h1>Here is a list of pictures currently in the database:</h1>')
-    } catch (error) {
-        console.log(error)
-    }
-})
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/abs', (req, res, next) => {
-    try {
-        res.send(`<h1>Monday: Sit ups</h1>`)
-    } catch (error) {
-        console.log(error)
-    }
-})
+const routes = require('./routes/routes.js')(app, fs)
 
 app.listen(PORT, () => {
     console.log(`Listening to port: ${PORT}`)
