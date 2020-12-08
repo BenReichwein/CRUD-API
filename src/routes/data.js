@@ -18,7 +18,6 @@ const data = (app, fs) => {
             if (err) {
                 throw err;
             }
-
             callback();
         });
     };
@@ -29,9 +28,14 @@ const data = (app, fs) => {
             if (err) {
                 throw err;
             }
-
             res.send(JSON.parse(data));
+            res.end()
         });
+    });
+
+    // SEND IMAGE
+    app.get('/img', (req, res) => {
+        res.sendFile('/src/data/absimgs/bicycle-crunches.jpg');
     });
 };
 
