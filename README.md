@@ -12,7 +12,7 @@ CRUD API making a login system and posting
 ## Installation
 
 ```sh
-git pull (Repo Link)
+git pull https://github.com/BenReichwein/CRUD-API.git
 cd API
 npm install
 ```
