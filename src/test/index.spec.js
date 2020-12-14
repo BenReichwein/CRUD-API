@@ -19,7 +19,7 @@ describe('Testing basic request and status codes', function () {
     })
   })
 
-  describe('/abs', () => {
+  describe('/images', () => {
     it('as an h1 tag send: Monday: Sit ups', (done) => {
       request(`${server}/abs`, (error, res, body) => {
         expect(body).to.equal(`<h1>Monday: Sit ups</h1>`)
@@ -28,7 +28,7 @@ describe('Testing basic request and status codes', function () {
       })
     })
     it('send back a status code of 200', function(done) {
-      request(`${server}/abs` , (error, res, body) => {
+      request(`${server}/images` , (error, res, body) => {
           expect(res.statusCode).to.equal(200)
           done()
       })
