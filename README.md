@@ -1,6 +1,6 @@
-# API - [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IanGelfand/API/issues) ![verison](https://img.shields.io/badge/version-v0.0.1-blue.svg?style=flat)
+# API - [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/BenReichwein/CRUD-API/issues) ![verison](https://img.shields.io/badge/version-v0.0.1-blue.svg?style=flat)
 
-Sample of how to use express with chai and mocha testing.
+CRUD API making a login system and posting
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ Sample of how to use express with chai and mocha testing.
 ## Installation
 
 ```sh
-git pull https://github.com/IanGelfand/API/issues/new
+git pull (Repo Link)
 cd API
 npm install
 ```
