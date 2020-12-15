@@ -2,15 +2,6 @@
 const sanitize = require('mongo-sanitize');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
-const redis = require('redis');
-const client = redis.createClient({
-  url: "redis://redis-19193.c14.us-east-1-2.ec2.cloud.redislabs.com:19193",
-  password: "QcOi1cReoY9uWJPIlkJqLI8cgN5dBNNL",
-});
-const { promisify } = require('util');
-const hgetAsync = promisify(client.hget).bind(client);
-const hsetAsync = promisify(client.hset).bind(client);
-const hdelAsync = promisify(client.hdel).bind(client);
 // Model
 const User = require("../models/User");
 
@@ -87,17 +78,12 @@ const user = (app) => {
       if (!await bcrypt.compare(req.body.password, user.password))
         return res.status(422).json({ err: 'Invalid password' });
 
-      const token = crypto.randomBytes(64).toString('hex');
-
-      await hsetAsync('access_tokens', token, user.id);
-
       return res.status(200).json({
         user: {
           id: user.id,
           email: user.email,
           username: user.username,
         },
-        accessToken: token,
       });
     });
     // ===========
@@ -134,7 +120,6 @@ const user = (app) => {
     // Logout
     // ======
     app.post('/user/logout', async (req, res) => {
-      await hdelAsync('access_tokens', req['access_token']);
   
       return res.status(200).json();
     });
