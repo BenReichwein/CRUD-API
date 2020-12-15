@@ -84,7 +84,7 @@ const user = (app) => {
           .status(404)
           .json({ err: 'No user with such email or username found' });
 
-      if (!bcrypt.compare(req.body.password, user.password))
+      if (!await bcrypt.compare(req.body.password, user.password))
         return res.status(422).json({ err: 'Invalid password' });
 
       const token = crypto.randomBytes(64).toString('hex');
